@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Sergey_Onrey</title>
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>SergeyOnrey</span>
+        </div>
+
+        <div id="about">
+        <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+        <a href="#" onclik="slowScroll('#overview')" title="Галерея">Галерея</a>
+        <a href="#" onclik="slowScroll('#contacts')" title="Контакты">Контакты</a>
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Фотография</h1>
+        <h3>как образ жизни</h3>
+    </div>
+    
+    <div id="main">
+        <div class="intro">
+            <h2>Наши возможности украсят вашу жизнь</h2>
+        </div>
+        <div class="text">
+                <h1>* Свадебная фотосъемка </h1>
+                <h1>* Коммерческая фотосъмка </h1>
+                <h1>* Репортажная фотосъемка </h1>
+                <h1>* Интерьерная фотосъемка </h1>
+                <h1>* Предметная фотосъемка </h1>
+                <h1>* Детская фотосъемка </h1>
+                <h1>* Семейная фотосъемка </h1>
+                <h1>* Студийные фотосессии </h1>
+                <h1>* Фотосъемка и Lovestory </h1>
+        </div>
+    </div>
+
+    <div id="overview">
+        <h2>Фотография фиксирует вечность, на деле являясь доказательством того, что всё</h2>
+        <h4>есть лишь краткий миг в глазах вечности.</h4>
+        
+        <div class="img">
+            <img src="https://sun9-50.userapi.com/impg/uE6MZME-gmt11EJqKY7Kc8Qz79HvzhQbGfnH2A/7ULjrrM9slc.jpg?size=1441x2160&quality=96&sign=c51fe4f08c33147eabe73c76c5231897&type=album" alt="">
+        </div>
+        <div class="img">
+            <img src="https://sun9-64.userapi.com/impf/c845019/v845019621/10a96f/QSzswBG7WxY.jpg?size=1546x2160&quality=96&sign=97ab6cb4512102309d8f856461b8226d&type=album" alt="">
+        </div>
+        <div class="img">
+            <img src="https://sun9-13.userapi.com/impf/c845019/v845019621/10aa36/QLSW10FhyuY.jpg?size=2560x1706&quality=96&sign=8cbd6f8d3d1add67a06f32e08d709435&type=album" alt="">
+        </div>
+        <div class="img">
+            <img src="https://sun9-18.userapi.com/impg/gENme4h6yvN307sJ2RhgD4B6XsuojsceNRIjQw/4XLvDr6dkFI.jpg?size=2560x1831&quality=96&sign=1ece05f2a83db01b994a863d2a814cae&type=album" alt="">
+        </div>
+        <div class="img">
+            <img src="https://sun9-28.userapi.com/impf/Fuzru7vUHjSjXBgcUaqWBRrh1HvARznS9VQ4lg/XbEKhcxix8o.jpg?size=1280x895&quality=96&sign=fef8539787eb1e2f76bd00cc283697b5&type=album" alt="">
+        </div>
+        <div class="img">
+            <img src="https://sun9-42.userapi.com/impg/c854320/v854320330/23cc95/DsxJBA6vg8k.jpg?size=2560x1707&quality=96&sign=f6c7cb2176784413736e997975be26d7&type=album" alt="">
+        </div>     
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+            $('html, body').animate({
+              scrollTop:$(id).offset().top                
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+          if($(window).scrollTop() === 0)
+              $("header").removeClass("fixed");
+          else
+             $("header").attr("class", "fixed");
+        });
+    </script>  
+</body>
+</html>
